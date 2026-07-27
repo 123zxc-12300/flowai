@@ -9,7 +9,8 @@ function authMiddleware(req, res, next) {
 
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const secret = process.env.JWT_SECRET || 'flowai-default-jwt-secret';
+    const decoded = jwt.verify(token, secret);
     req.userId = decoded.userId;
     req.userPhone = decoded.phone;
     next();
