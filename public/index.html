@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlowAI 流智 — AI 自动化，让工作流动起来</title>
+<meta name="description" content="FlowAI 流智 — 一站式 AI 自动化平台。文案生成、商品详情图、简历制作、电商客服、视频剪辑，按量计费，即开即用。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="/" class="logo">
+      <span class="logo-icon">🌊</span>
+      <span class="logo-text">FlowAI<span class="logo-accent">流智</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">功能</a>
+      <a href="#pricing">定价</a>
+      <a href="#how-it-works">工作原理</a>
+      <a href="/login.html" class="btn btn-outline" id="nav-login">登录</a>
+      <a href="/login.html?tab=register" class="btn btn-primary" id="nav-register">免费注册</a>
+    </div>
+    <button class="mobile-menu-btn" aria-label="菜单" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- 英雄区 -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">🤖 AI 驱动 · 即开即用</div>
+    <h1 class="hero-title">
+      让工作<span class="text-gradient">自动流动</span>起来
+    </h1>
+    <p class="hero-subtitle">
+      文案生成、商品详情图、智能客服、视频剪辑、简历制作——<br>
+      一个平台，搞定你的全部自动化需求。按量计费，零门槛上手。
+    </p>
+    <div class="hero-actions" id="hero-actions">
+      <a href="/login.html?tab=register" class="btn btn-primary btn-lg">免费开始使用 →</a>
+      <a href="#features" class="btn btn-ghost btn-lg">了解功能</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">8+</span>
+        <span class="stat-label">文案类型</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">5</span>
+        <span class="stat-label">自动化场景</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">¥1</span>
+        <span class="stat-label">新用户体验金</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 功能卡片 -->
+<section class="features section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">核心能力</span>
+      <h2>五大自动化场景，覆盖你的工作流</h2>
+      <p>从内容创作到客户服务，AI 帮你处理重复性工作</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✍️</div>
+        <h3>智能文案生成</h3>
+        <p>商品描述、社交媒体、广告文案、SEO文章……8 种文案类型，输入需求秒出结果。</p>
+        <span class="feature-tag">已上线</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🖼️</div>
+        <h3>商品详情图</h3>
+        <p>上传产品图，AI 自动生成高转化率的详情页配图，电商卖家必备。</p>
+        <span class="feature-tag feature-tag--soon">即将上线</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <h3>简历自动生成</h3>
+        <p>输入信息，AI 自动排版美化，一键导出专业简历。找工作从未如此简单。</p>
+        <span class="feature-tag feature-tag--soon">即将上线</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>电商智能客服</h3>
+        <p>对接主流电商平台，7×24 自动回复买家咨询，大幅降低客服人力成本。</p>
+        <span class="feature-tag">已上线</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎬</div>
+        <h3>视频智能剪辑</h3>
+        <p>上传素材，AI 自动剪辑配音配字幕。短视频创作者的效率利器。</p>
+        <span class="feature-tag feature-tag--soon">即将上线</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 工作原理 -->
+<section class="how-it-works section section--alt" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">三步开始</span>
+      <h2>简单到不需要教程</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>注册账号</h3>
+        <p>手机号注册，即送 ¥1 体验金</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>选择场景</h3>
+        <p>文案、图片、客服……选你需要的</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>获取结果</h3>
+        <p>AI 几秒生成，按量扣费，透明实惠</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 定价 -->
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">灵活定价</span>
+      <h2>按量计费，用多少付多少</h2>
+      <p>没有月费，没有最低消费。充值即用，余额永不过期。</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tag">入门</div>
+        <div class="pricing-amount">¥10</div>
+        <div class="pricing-credits">到账 10 元</div>
+        <p>试用体验，满足小量需求</p>
+      </div>
+      <div class="pricing-card pricing-card--highlight">
+        <div class="pricing-tag">推荐</div>
+        <div class="pricing-amount">¥50</div>
+        <div class="pricing-credits">到账 55 元 <span class="bonus">(+5元赠送)</span></div>
+        <p>适合个人卖家日常使用</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tag">超值</div>
+        <div class="pricing-amount">¥100</div>
+        <div class="pricing-credits">到账 115 元 <span class="bonus">(+15元赠送)</span></div>
+        <p>适合频繁使用的专业用户</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tag">企业</div>
+        <div class="pricing-amount">¥500</div>
+        <div class="pricing-credits">到账 625 元 <span class="bonus">(+125元赠送)</span></div>
+        <p>适合团队大批量调用</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta section">
+  <div class="container cta-content">
+    <h2>准备好让你的工作自动流动了吗？</h2>
+    <p>注册即送 ¥1 体验金，零成本体验 AI 自动化。</p>
+    <a href="/login.html?tab=register" class="btn btn-primary btn-lg">免费注册 →</a>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <span class="logo-text">🌊 FlowAI<span class="logo-accent">流智</span></span>
+      <p>AI 自动化，让工作流动起来</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>产品</h4>
+        <a href="#features">功能</a>
+        <a href="#pricing">定价</a>
+      </div>
+      <div class="footer-col">
+        <h4>支持</h4>
+        <a href="#">使用文档</a>
+        <a href="#">API 文档</a>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <a href="#">意见反馈</a>
+        <a href="#">合作咨询</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 FlowAI 流智. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

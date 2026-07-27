@@ -1,0 +1,6 @@
+node_modules/
+server/data/
+server/browser_data/
+*.env
+.env
+.DS_Store

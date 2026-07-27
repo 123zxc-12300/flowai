@@ -1,0 +1,18 @@
+# Render 部署配置
+services:
+  - type: web
+    name: flowai
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        value: flowai-prod-secret-change-me-2026
+      - key: DEEPSEEK_API_KEY
+        value: sk-b0d6953ec6bb4383a3363df75f1ba2d4
+      - key: DEEPSEEK_BASE_URL
+        value: https://api.deepseek.com/v1
+      - key: NODE_ENV
+        value: production

@@ -1,0 +1,13 @@
+{
+  "name": "flowai",
+  "version": "1.0.0",
+  "description": "FlowAI 流智 — AI 自动化 SaaS 平台",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd server && npm install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
