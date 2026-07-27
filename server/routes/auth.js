@@ -54,29 +54,36 @@ router.post('/register', (req, res) => {
 
 // 登录
 router.post('/login', (req, res) => {
-  const { phone, password } = req.body;
-  if (!phone || !password) {
-    return res.status(400).json({ error: '手机号和密码不能为空' });
-  }
-
-  const user = getDB().get('SELECT * FROM users WHERE phone = ?', [phone]);
-  if (!user || !bcrypt.compareSync(password, user.password_hash)) {
-    return res.status(400).json({ error: '手机号或密码错误' });
-  }
-
-  const token = jwt.sign(
-    { userId: user.id, phone: user.phone },
-    process.env.JWT_SECRET,
-    { expiresIn: '7d' }
-  );
-
-  res.json({
-    token,
-    user: {
-      id: user.id, phone: user.phone, nickname: user.nickname,
-      balance: user.balance, totalUsed: user.total_used
+  try {
+    const { phone, password } = req.body;
+    if (!phone || !password) {
+      return res.status(400).json({ error: '手机号和密码不能为空' });
     }
-  });
+
+    const db = getDB();
+    const user = db.get('SELECT * FROM users WHERE phone = ?', [phone]);
+    if (!user || !bcrypt.compareSync(password, user.password_hash)) {
+      return res.status(400).json({ error: '手机号或密码错误' });
+    }
+
+    const secret = process.env.JWT_SECRET || 'flowai-default-jwt-secret';
+    const token = jwt.sign(
+      { userId: user.id, phone: user.phone },
+      secret,
+      { expiresIn: '7d' }
+    );
+
+    res.json({
+      token,
+      user: {
+        id: user.id, phone: user.phone, nickname: user.nickname,
+        balance: user.balance, totalUsed: user.total_used
+      }
+    });
+  } catch (err) {
+    console.error('[登录] 错误:', err);
+    res.status(500).json({ error: '服务器内部错误: ' + (err.message || '未知') });
+  }
 });
 
 // 获取当前用户
